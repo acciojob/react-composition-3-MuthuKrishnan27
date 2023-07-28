@@ -1,1 +1,35 @@
-
+/* Tooltip container */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip {
+    border-bottom: 1px dotted black; /* Dotted underline to indicate hoverable */
+  }
+  
+  /* The actual tooltip text */
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show the tooltip text when hovering over the tooltip container */
+  .tooltip-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
